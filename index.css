@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&family=Poppins&display=swap');
+* {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    width: calc(100% - 80px);
+    background-color: white;
+    box-shadow: 1px 2px 3px rgba(16, 183, 1, 0.252);
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+
+.logo a {
+    font-family: 'Maven Pro', sans-serif;
+    color: rgb(5, 165, 5);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    gap: 20px;
+    align-items: center;
+    list-style-type: none;
+}
+
+nav ul a {
+    text-decoration: none;
+    position: relative;
+    color: black;
+}
+
+.nav ul li {
+    position: relative;
+}
+
+.navLink::after {
+    display: block;
+    content: " ";
+    background-color: green;
+    height: 3px;
+    width: 100%;
+    border-radius: 30px;
+    position: absolute;
+    opacity: 0;
+    transition: 200ms;
+    transform: scale(0);
+}
+
+.navLink:hover {
+    color: green;
+}
+
+.navLink:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.loginButton {
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    border: none;
+    color: white;
+    background-image: linear-gradient(rgb(62, 243, 62), rgb(4, 170, 4));
+}
+
+.cart {
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    color: black;
+    border-radius: 50%;
+    transition: background 200ms;
+    background: white;
+}
+
+.cart:hover {
+    cursor: pointer;
+    color: white;
+    background-image: linear-gradient(rgb(62, 243, 62), rgb(4, 170, 4));
+}
+
+.bi-cart3 {
+    font-size: 1.3rem;
+}
+
+section {
+    display: flex;
+}
+
+section div {
+    flex: 1;
+}
+
+section img {
+    width: 50vw;
+    border-radius: 30%;
+}
+
+.sectionLeft {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sectionLeft h1 {
+    font-size: 4rem;
+    width: 80%;
+    font-weight: bolder;
+}
+
+.sectionLeft p {
+    font-size: 1rem;
+}
+
+.odernowButton {
+    background-image: linear-gradient(rgb(119, 117, 117), black);
+    color: white;
+    width: max-content;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 30px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.204);
+}
+
+.spdishes {
+    margin-top: 50px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.spdishes h3 {
+    font-size: 2.4rem;
+    font-weight: bolder;
+}
+
+.spdishes h4 {
+    font-size: 1rem;
+    color: rgb(64, 62, 62);
+}
+
+.cardHolder {
+    display: flex;
+    padding: 20px 40px;
+    width: calc(100% - 80px);
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    border: 1px solid rgba(192, 192, 192, 0.163);
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.card:hover {
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.117);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h5 {
+    font-size: 1rem;
+}
+
+.card p {
+    padding: 10px;
+    text-align: justify;
+}
+
+.menu {
+    display: none;
+}
+
+@media screen and (max-width:780px) {
+    section {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    section img {
+        width: 98vw;
+    }
+    .sectionLeft h1 {
+        font-size: 2rem;
+        width: 100%;
+    }
+    .spdishes h3 {
+        font-size: 2rem;
+    }
+    a {
+        text-decoration: none;
+    }
+    nav ul {
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        right: 5px;
+        top: 60px;
+        display: none;
+        padding: 10px 0px;
+        border-radius: 5px;
+        width: 200px;
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.217);
+    }
+    .menu {
+        border: none;
+        background-color: white;
+        font-size: 2rem;
+        position: absolute;
+        right: 20px;
+        display: block;
+        font-weight: bolder;
+    }
+}

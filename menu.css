@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&family=Poppins&display=swap');
+* {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+section {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+    width: 200px;
+    border: 1px solid rgb(193, 192, 192);
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 7px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+}
+
+.price {
+    display: flex;
+    gap: 20px;
+    font-family: initial;
+    align-items: center;
+}
+
+.price h4 {
+    font-family: initial;
+}
+
+.price span {
+    font-family: initial;
+    color: red;
+    text-decoration: line-through;
+}
+
+.price h4:last-child {
+    color: green;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card p {
+    padding: 10px;
+    border-top: 1px solid rgba(163, 163, 163, 0.211);
+    font-size: 0.8rem;
+}
+
+.card:hover {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.337);
+}
+
+.addtocart {
+    border: none;
+    opacity: 0;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    top: 10px;
+    right: 10px;
+    display: none;
+    box-shadow: 1px 1px 10px rgb(179, 176, 176);
+}
+
+.details {
+    text-decoration: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    color: rgb(6, 107, 43);
+    padding: 3px 10px;
+    font-weight: bold;
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    bottom: 10px;
+    gap: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.472);
+    border-radius: 40px;
+    display: none;
+}
+
+.details img {
+    width: 30px;
+}
+
+.card:hover .addtocart {
+    display: grid;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.card:hover .details {
+    display: flex;
+}
+
+@media screen and (max-width:780px) {
+    section {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .card {
+        width: 100%;
+    }
+}

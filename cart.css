@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&family=Poppins&display=swap');
+* {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 20px;
+}
+
+.cartRight {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cartRight {
+    flex: 0.7;
+}
+
+.cartLeft {
+    flex: 0.3;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cartLeft div:first-child,
+.cartRight div:first-child {
+    padding: 10px 10px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    font-size: larger;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.189);
+}
+
+.cartRight div:last-child {
+    border-radius: 0 0 5px 5px;
+}
+
+.card {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.189);
+}
+
+.card img {
+    width: 20%;
+}
+
+.cardDetails {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px 10px;
+    gap: 10px;
+    /* flex-direction: column; */
+}
+
+.price {
+    display: flex;
+    gap: 20px;
+    font-family: initial;
+    align-items: center;
+}
+
+.price h4 {
+    font-family: initial;
+}
+
+.price span {
+    font-family: initial;
+    color: red;
+    text-decoration: line-through;
+}
+
+.price h4:last-child {
+    color: green;
+    font-family: 'Poppins', sans-serif;
+}
+
+.addlessbutton {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.addlessbutton button {
+    background-color: rgb(7, 203, 7);
+    color: white;
+    border: none;
+    line-height: 10px;
+    padding: 10px 10px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+}
+
+.addlessbutton button:hover {
+    background-color: green;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.273);
+}
+
+.addlessbutton input {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 0px;
+    background-color: rgb(188, 248, 219);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.removeButton {
+    background-color: rgb(213, 212, 212);
+    color: rgb(46, 45, 45);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    /* border: 1px solid silver; */
+    border: none;
+    padding: 5px 10px;
+    font-size: bold;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.101);
+}
+
+.removeButton:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.101);
+}
+
+.pricedetails {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.189);
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    color: rgb(87, 87, 87);
+    font-weight: normal;
+}
+
+.pricedetails h3 {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.pricedetails h3:last-child {
+    font-family: initial;
+}
+
+.paynow {
+    background-color: rgb(4, 218, 33);
+    border: none;
+    font-size: 1rem;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+
+.paynow:hover {
+    background-color: rgb(4, 196, 30);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.072);
+    cursor: pointer;
+}
+
+@media screen and (max-width:780px) {
+    section {
+        flex-direction: column;
+    }
+    .cardDetails {
+        flex-direction: column;
+    }
+    .card img {
+        width: 40%;
+    }
+}
